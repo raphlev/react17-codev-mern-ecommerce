@@ -1,0 +1,37 @@
+{
+  "name": "mern_clone",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/ziddahedem/mern-yt-clone.git",
+  "author": "Ziddah Edem <ziddah.edem@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "yarn --cwd frontend start",
+    "dev": "concurrently \"yarn client\" \"yarn server\"",
+    "build": "cd frontend && yarn build",
+    "install-client": "cd frontend && yarn install",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn run install-client && yarn run build"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.11",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
