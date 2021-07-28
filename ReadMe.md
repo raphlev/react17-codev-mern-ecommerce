@@ -56,7 +56,10 @@ Deploy to Heroku:
 
 --> server app available from deployed location: https://rlu-react17-ecommerce.herokuapp.com
 
-Deploy to git origin repo
+Deploy to git origin repo again after this commit to heroku:
+- git push origin main
+
+Optional: update local repo with development env values
 - update .env : add value for DEV again
   PORT=5000
   NODE_ENV=development
