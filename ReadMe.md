@@ -24,32 +24,32 @@ Before deploying:
   --> enable heroku to start the backend app as soon as the application is deployed
 
 heroku-cli:
-- heroku -v
-- heroku login > follow the prompts to connect through the browser (SSH key)
+- /usr/bin/heroku -v
+- /usr/bin/heroku login > follow the prompts to connect through the browser (SSH key)
 
 Check of Heroku App releases:
-- heroku status --> connected to heroku
-- heroku releases --> shows list of server releases and each deploy previously done
+- /usr/bin/heroku status --> connected to heroku
+- /usr/bin/heroku releases --> shows list of server releases and each deploy previously done
 
 Create Heroku App release (if not exist yet - if previous command returns no releases for this App)
-- git init
-- heroku git:remote -a rlu-react17-ecommerce
+- git init  (not necessary if git repo already initialized for this project)
+- /usr/bin/heroku git:remote -a rlu-react17-ecommerce
 
 Add / commit latest changes:
 - git add .   --> add updated file since last commit
 - git commit -am "c"   --> commit last updated file
 
 Check / Add env variable:
-- heroku config  
-- heroku config:set CONNECTION_URL=mongodb+srv://react17:oaWfhqGW6uldmJgz@cluster0.defgx.mongodb.net/mainDatabase?retryWrites=true&w=majority
-- heroku config:set PAYPAL_CLIENT_ID=AaH0Gsk79ytEgMILos1-COD3sjucqzhsbovEvvxswDxZxDCb5f7QXlFRaF9LQv7cYi9qq_CewRatzV7H
-- heroku config:set JWT_SECRET=JWT_SECRET
-- heroku config:set JWT_EXPIRESIN=3600
-- heroku config  
+- /usr/bin/heroku config  
+- /usr/bin/heroku config:set CONNECTION_URL=mongodb+srv://react17:oaWfhqGW6uldmJgz@cluster0.defgx.mongodb.net/mainDatabase?retryWrites=true&w=majority
+- /usr/bin/heroku config:set PAYPAL_CLIENT_ID=AaH0Gsk79ytEgMILos1-COD3sjucqzhsbovEvvxswDxZxDCb5f7QXlFRaF9LQv7cYi9qq_CewRatzV7H
+- /usr/bin/heroku config:set JWT_SECRET=JWT_SECRET
+- /usr/bin/heroku config:set JWT_EXPIRESIN=3600
+- /usr/bin/heroku config  
 
 Deploy to Heroku:
 - git push heroku master
-- heroku logs --tail  
+- /usr/bin/heroku logs --tail  
 
 ### If the package.json has a build script that needs to be customized for Heroku, define a heroku-postbuild script, which will run instead of the build script.
 
