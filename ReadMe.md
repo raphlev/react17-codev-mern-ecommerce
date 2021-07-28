@@ -49,6 +49,7 @@ Check / Add env variable:
 
 Deploy to Heroku:
 - git push heroku master
+- [error: src refspec master does not match any]--> git push heroku HEAD:master
 - /usr/bin/heroku logs --tail  
 
 ### If the package.json has a build script that needs to be customized for Heroku, define a heroku-postbuild script, which will run instead of the build script.
