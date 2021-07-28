@@ -55,3 +55,11 @@ Deploy to Heroku:
 ### If the package.json has a build script that needs to be customized for Heroku, define a heroku-postbuild script, which will run instead of the build script.
 
 --> server app available from deployed location: https://rlu-react17-ecommerce.herokuapp.com
+
+Deploy to git origin repo
+- update .env : add value for DEV again
+  PORT=5000
+  NODE_ENV=development
+- git add .
+- git commit -am "c"
+- git push origin main
