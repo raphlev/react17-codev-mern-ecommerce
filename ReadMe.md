@@ -32,7 +32,7 @@ Check of Heroku App releases:
 - /usr/bin/heroku releases --> shows list of server releases and each deploy previously done
 
 Create Heroku App release (if not exist yet - if previous command returns no releases for this App)
-- git init  (not necessary if git repo already initialized for this project)
+- git init
 - /usr/bin/heroku git:remote -a rlu-react17-ecommerce
 
 Add / commit latest changes:
